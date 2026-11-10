@@ -1,0 +1,29 @@
+<Project>
+  <!-- Shared settings for all Xenonauts 2 code mods. GameManaged comes from the XENONAUTS2_MANAGED environment variable (see README). -->
+  <PropertyGroup>
+    <GameManaged Condition="'$(GameManaged)' == ''">$(XENONAUTS2_MANAGED)</GameManaged>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>11.0</LangVersion>
+    <Nullable>disable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <DisableImplicitFrameworkReferences>false</DisableImplicitFrameworkReferences>
+    <!-- MSB3277: netstandard vs Unity framework versions; CS0618: the game still uses StaticTextTooltipCreator itself. -->
+    <NoWarn>$(NoWarn);MSB3277;CS0618</NoWarn>
+    <MSBuildWarningsAsMessages>MSB3277</MSBuildWarningsAsMessages>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(GameManaged)/Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(GameManaged)/Assembly-CSharp-firstpass.dll" Private="false" />
+    <Reference Include="$(GameManaged)/0Harmony.dll" Private="false" />
+    <Reference Include="$(GameManaged)/log4net.dll" Private="false" />
+    <Reference Include="$(GameManaged)/Sirenix.OdinInspector.Attributes.dll" Private="false" />
+    <Reference Include="$(GameManaged)/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(GameManaged)/UnityEngine.UI.dll" Private="false" />
+    <Reference Include="$(GameManaged)/UnityEngine.UIModule.dll" Private="false" />
+    <Reference Include="$(GameManaged)/UnityEngine.InputLegacyModule.dll" Private="false" />
+    <Reference Include="$(GameManaged)/UnityEngine.TextRenderingModule.dll" Private="false" />
+    <Reference Include="$(GameManaged)/Unity.TextMeshPro.dll" Private="false" />
+  </ItemGroup>
+</Project>
