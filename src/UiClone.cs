@@ -48,7 +48,9 @@ internal static class UiClone
         foreach (Transform child in parent)
         {
             var layout = child.GetComponent<LayoutElement>();
-            if (layout != null && !layout.ignoreLayout && Mathf.Approximately(layout.preferredWidth, width))
+            // Hidden columns (the Manage row keeps an inactive "stress" cell) take no space.
+            if (child.gameObject.activeSelf && layout != null && !layout.ignoreLayout
+                && Mathf.Approximately(layout.preferredWidth, width))
                 columns.Add(layout);
         }
         // columns includes the clone, so there is one more than before.

@@ -24,7 +24,7 @@ internal static class TotalStats
         + Mathf.RoundToInt(actor.Bravery().ToStrategyBoundedRange().Value);
 }
 
-// Colours every visible total from red (lowest in the list) to green (highest).
+// Colours every total from red (lowest in the list) to green (highest), separately per screen.
 internal static class TotalColors
 {
     private sealed class Entry
@@ -38,33 +38,42 @@ internal static class TotalColors
     private static readonly Color Mid = new Color(0.95f, 0.85f, 0.3f);
     private static readonly Color High = new Color(0.45f, 0.85f, 0.3f);
 
-    private static readonly List<Entry> Entries = new List<Entry>();
+    private static readonly Dictionary<string, List<Entry>> Screens = new Dictionary<string, List<Entry>>();
 
-    public static void Clear() => Entries.Clear();
+    private static List<Entry> Entries(string screen)
+    {
+        if (!Screens.TryGetValue(screen, out var entries))
+            Screens[screen] = entries = new List<Entry>();
+        return entries;
+    }
 
-    public static void Remove(TMP_Text text) => Entries.RemoveAll(e => e.Text == null || e.Text == text);
+    public static void Clear(string screen) => Entries(screen).Clear();
+
+    public static void Remove(string screen, TMP_Text text) =>
+        Entries(screen).RemoveAll(e => e.Text == null || e.Text == text);
 
     // graphics: the cloned cell's background/bar graphics. When the cell has any, those are
     // tinted (like the game's own stat cells) and the text keeps its colour; otherwise the text is tinted.
-    public static void Set(TMP_Text text, Graphic[] graphics, int value)
+    public static void Set(string screen, TMP_Text text, Graphic[] graphics, int value)
     {
-        Entries.RemoveAll(e => e.Text == null);
-        var entry = Entries.Find(e => e.Text == text);
+        var entries = Entries(screen);
+        entries.RemoveAll(e => e.Text == null);
+        var entry = entries.Find(e => e.Text == text);
         if (entry == null)
         {
             entry = new Entry { Text = text };
-            Entries.Add(entry);
+            entries.Add(entry);
         }
         entry.Graphics = graphics;
         entry.Value = value;
 
         int min = int.MaxValue, max = int.MinValue;
-        foreach (var e in Entries)
+        foreach (var e in entries)
         {
             min = Mathf.Min(min, e.Value);
             max = Mathf.Max(max, e.Value);
         }
-        foreach (var e in Entries)
+        foreach (var e in entries)
         {
             var color = Interpolate(max > min ? (float)(e.Value - min) / (max - min) : 0.5f);
             if (e.Graphics != null && e.Graphics.Length > 0)

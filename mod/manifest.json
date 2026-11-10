@@ -2,8 +2,8 @@
     "version": "0.1.0",
     "asset": {
         "UID": "3f9a6d2e-8b41-4c7e-a5d0-91e2b7c4f803",
-        "Name": "Squad Select Total",
-        "Description": "Adds a TOT column (sum of Health, Time Units, Accuracy, Strength, Reflexes and Bravery) to the soldier selection list used when assigning soldiers to a dropship. Click the header to sort by it.",
+        "Name": "Soldier Total Stats",
+        "Description": "Adds a TOT column (sum of Health, Time Units, Accuracy, Strength, Reflexes and Bravery) to every soldier list: the Manage and Recruit screens and the soldier picker used when assigning soldiers to a dropship. Click the header to sort by it.",
         "Author": "Reuven",
         "Tags": ["UI", "QoL"],
         "Dependencies": [],
@@ -12,7 +12,7 @@
         "IncompatibleWith": [],
         "RemoveFiles": [],
         "SupportedLanguages": [],
-        "Version": "0.1.4",
+        "Version": "0.2.0",
         "$t": "14"
     },
     "$t": "15"

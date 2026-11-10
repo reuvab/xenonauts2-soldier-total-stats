@@ -1,6 +1,6 @@
 # Xenonauts 2 — Soldier Total Stats
 
-Adds a sortable TOT column (Health + Time Units + Accuracy + Strength + Reflexes + Bravery) to soldier lists. Currently covers the soldier picker used when filling a dropship slot.
+Adds a sortable TOT column (Health + Time Units + Accuracy + Strength + Reflexes + Bravery) to soldier lists. Covers the Soldiers > Manage and Recruit screens and the soldier picker used when filling a dropship slot.
 
 A code mod for Xenonauts 2 (Harmony patches, loaded by the game's own mod system).
 
