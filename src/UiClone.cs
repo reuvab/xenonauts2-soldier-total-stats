@@ -5,7 +5,7 @@ using Common.UI.Tooltips.Creators;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SquadSelectTotal;
+namespace SoldierTotalStats;
 
 internal static class UiClone
 {

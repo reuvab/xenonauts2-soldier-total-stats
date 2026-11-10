@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Xenonauts.Strategy.Utils;
 
-namespace SquadSelectTotal;
+namespace SoldierTotalStats;
 
 internal static class TotalStats
 {

@@ -5,7 +5,7 @@ using Strategy.UI.Elements.Soldiers;
 using Xenonauts.Common.Util.Comparers;
 using Xenonauts.Strategy.UI;
 
-namespace SquadSelectTotal;
+namespace SoldierTotalStats;
 
 // One header patch, one "screen opened" patch and one row patch per soldier list.
 // Colours are relative to the soldiers listed on that screen, so they reset when it opens.

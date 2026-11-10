@@ -7,13 +7,13 @@ using Common.Content.Lifecycle;
 using HarmonyLib;
 using UnityEngine;
 
-namespace SquadSelectTotal;
+namespace SoldierTotalStats;
 
 // Writes to Unity's Player.log (the game's log4net config only records errors) and to
 // XenoMods.log in the game's data folder, which is written at once rather than buffered.
 public static class ModLog
 {
-    public const string Prefix = "[SquadSelectTotal]";
+    public const string Prefix = "[SoldierTotalStats]";
 
     private static string _file;
 
@@ -45,7 +45,7 @@ public static class ModLog
 
 // The game calls Harmony.PatchAll on every assembly in the content pack, so the
 // lifecycle only needs to exist; it is used here to confirm the mod loaded.
-public class SquadSelectTotalLifecycle : IContentPackLifecycle
+public class SoldierTotalStatsLifecycle : IContentPackLifecycle
 {
     public void Create(ContentPackState pack, Harmony patcher) => ModLog.Info("Create - mod loaded");
 

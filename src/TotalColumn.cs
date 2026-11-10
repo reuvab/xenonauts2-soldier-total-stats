@@ -9,7 +9,7 @@ using TMPro;
 using UnityEngine.UI;
 using Xenonauts.Common.Util.Comparers;
 
-namespace SquadSelectTotal;
+namespace SoldierTotalStats;
 
 // The TOT column itself. Every soldier list in the game (soldier picker, Manage, Recruit) is built
 // the same way: a header row of sort toggles and pooled rows of stat cells, sorted through a
@@ -17,8 +17,8 @@ namespace SquadSelectTotal;
 // of them; the per-screen patches only say which screen they are and where its row list lives.
 internal static class TotalColumn
 {
-    public const string HeaderName = "SquadSelectTotal_Header";
-    public const string CellName = "SquadSelectTotal_Cell";
+    public const string HeaderName = "SoldierTotalStats_Header";
+    public const string CellName = "SoldierTotalStats_Cell";
 
     // screen: the screen object (its private _comparer / _columnsChangeComparer fields are used).
     // controllersField: name of the screen's private row list field, which has the Sort() method.

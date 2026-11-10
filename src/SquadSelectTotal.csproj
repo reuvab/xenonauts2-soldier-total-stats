@@ -1,6 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <AssemblyName>SquadSelectTotal</AssemblyName>
-    <RootNamespace>SquadSelectTotal</RootNamespace>
-  </PropertyGroup>
-</Project>
