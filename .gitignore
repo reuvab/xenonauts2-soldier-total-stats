@@ -4,3 +4,4 @@ mod/assembly/
 local.env
 *.user
 .DS_Store
+dist/

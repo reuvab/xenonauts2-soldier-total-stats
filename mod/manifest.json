@@ -3,16 +3,28 @@
     "asset": {
         "UID": "3f9a6d2e-8b41-4c7e-a5d0-91e2b7c4f803",
         "Name": "Soldier Total Stats",
-        "Description": "Adds a TOT column (sum of Health, Time Units, Accuracy, Strength, Reflexes and Bravery) to every soldier list: the Manage and Recruit screens and the soldier picker used when assigning soldiers to a dropship. Click the header to sort by it.",
+        "Description": "Adds a TOT column showing the sum of a soldier's six stats (Health + Time Units + Accuracy + Strength + Reflexes + Bravery) to every soldier list in the game:\n\n- Soldiers > Manage\n- Soldiers > Recruit\n- The soldier picker used when assigning soldiers to a dropship\n\nClick the TOT header to sort by it; click again to reverse the order, like the other columns. Totals are coloured from red (lowest on that screen) to green (highest), so your best and weakest soldiers stand out at a glance. The other columns keep their positions and stay aligned.\n\nSave-safe: the mod stores nothing in your campaign, so it can be enabled or disabled at any time.\n\nNot compatible with Soldier Total Column, which adds a similar column to the Manage and Recruit screens; enable only one of the two.\n\nSource code: https://github.com/reuvab/xenonauts2-soldier-total-stats",
         "Author": "Reuven",
+        "Website": "https://github.com/reuvab/xenonauts2-soldier-total-stats",
+        "Credits": "Inspired by Soldier Total Column by mnshdw.",
         "Tags": ["UI", "QoL"],
-        "Dependencies": [],
+        "Dependencies": [
+            {
+                "UID": "7409d306-8813-4ae2-b2e2-8e94d4dc39f1",
+                "DisplayName": "Xenonauts"
+            }
+        ],
         "LoadBefore": [],
         "LoadAfter": [],
-        "IncompatibleWith": [],
+        "IncompatibleWith": [
+            {
+                "UID": "3726627096",
+                "DisplayName": "Soldier Total Column"
+            }
+        ],
         "RemoveFiles": [],
         "SupportedLanguages": [],
-        "Version": "0.2.1",
+        "Version": "1.0.0",
         "$t": "14"
     },
     "$t": "15"

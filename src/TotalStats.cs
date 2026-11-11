@@ -67,8 +67,13 @@ internal static class TotalColors
         entry.Graphics = graphics;
         entry.Value = value;
 
+        // Rows are pooled: a soldier who was fired or transferred leaves a hidden row behind,
+        // which must not stretch the scale. Fall back to every row while none are shown yet.
+        var shown = entries.FindAll(e => e.Text.gameObject.activeInHierarchy);
+        if (shown.Count == 0)
+            shown = entries;
         int min = int.MaxValue, max = int.MinValue;
-        foreach (var e in entries)
+        foreach (var e in shown)
         {
             min = Mathf.Min(min, e.Value);
             max = Mathf.Max(max, e.Value);

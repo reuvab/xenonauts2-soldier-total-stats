@@ -10,7 +10,7 @@ using UnityEngine;
 namespace SoldierTotalStats;
 
 // Writes to Unity's Player.log (the game's log4net config only records errors) and to
-// XenoMods.log in the game's data folder, which is written at once rather than buffered.
+// SoldierTotalStats.log in the game's user data folder, which is written at once rather than buffered.
 public static class ModLog
 {
     public const string Prefix = "[SoldierTotalStats]";
@@ -33,7 +33,7 @@ public static class ModLog
     {
         try
         {
-            _file ??= System.IO.Path.Combine(Application.persistentDataPath, "XenoMods.log");
+            _file ??= System.IO.Path.Combine(Application.persistentDataPath, "SoldierTotalStats.log");
             System.IO.File.AppendAllText(_file, $"{System.DateTime.Now:yyyy-MM-dd HH:mm:ss} {Prefix} {message}\n");
         }
         catch (System.Exception)

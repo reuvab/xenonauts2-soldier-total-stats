@@ -67,7 +67,6 @@ internal static class TotalColumn
             // Registered after the game wired its own listeners, so the game only uses this entry
             // to reset the header highlight when the screen opens, as it does for its own columns.
             toggles[TotalStats.TotalSortField] = toggle;
-            ModLog.Info($"{label}: header added");
         }
         catch (Exception e)
         {

@@ -2,5 +2,9 @@
   <PropertyGroup>
     <AssemblyName>SoldierTotalStats</AssemblyName>
     <RootNamespace>SoldierTotalStats</RootNamespace>
+    <!-- Keep local build paths out of the shipped DLL. -->
+    <Deterministic>true</Deterministic>
+    <PathMap>$(MSBuildProjectDirectory)=/src</PathMap>
+    <DebugType>none</DebugType>
   </PropertyGroup>
 </Project>
