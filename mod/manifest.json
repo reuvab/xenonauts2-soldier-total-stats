@@ -3,7 +3,7 @@
     "asset": {
         "UID": "3f9a6d2e-8b41-4c7e-a5d0-91e2b7c4f803",
         "Name": "Soldier Total Stats",
-        "Description": "Adds a TOT column showing the sum of a soldier's six stats (Health + Time Units + Accuracy + Strength + Reflexes + Bravery) to every soldier list in the game:\n\n- Soldiers > Manage\n- Soldiers > Recruit\n- The soldier picker used when assigning soldiers to a dropship\n\nClick the TOT header to sort by it; click again to reverse the order, like the other columns. Totals are coloured from red (lowest on that screen) to green (highest), so your best and weakest soldiers stand out at a glance. The other columns keep their positions and stay aligned.\n\nSave-safe: the mod stores nothing in your campaign, so it can be enabled or disabled at any time.\n\nNot compatible with Soldier Total Column, which adds a similar column to the Manage and Recruit screens; enable only one of the two.\n\nSource code: https://github.com/reuvab/xenonauts2-soldier-total-stats",
+        "Description": "Adds a sortable TOT column with each soldier's total stats (HP + TU + ACC + STR + RFL + BRV) to the Manage, Recruit and dropship soldier screens, coloured red to green.\n\nSave-safe. Not compatible with Soldier Total Column.",
         "Author": "Reuven",
         "Website": "https://github.com/reuvab/xenonauts2-soldier-total-stats",
         "Credits": "Inspired by Soldier Total Column by mnshdw.",

@@ -7,7 +7,11 @@ Adds a **TOT** column with the sum of a soldier's six stats
 - **Soldiers > Recruit**
 - **The soldier picker** used when assigning soldiers to a dropship
 
-<!-- screenshot: mod/preview.png -->
+![TOT column on the Manage Soldiers screen](docs/manage.png)
+
+| Recruit | Dropship soldier picker |
+|---|---|
+| ![TOT column on the Recruit screen](docs/recruit.png) | ![TOT column in the dropship soldier picker](docs/picker.png) |
 
 ## Features
 
@@ -37,7 +41,7 @@ Then enable the mod in the game's mod list and restart.
 - **Not compatible with [Soldier Total Column](https://steamcommunity.com/sharedfiles/filedetails/?id=3726627096)**,
   which adds a similar column to the Manage and Recruit screens. Enable only one of them; the
   game warns you if both are on.
-- Built and tested against Xenonauts 2 version 7.28.0.
+- Tested with Xenonauts 2 version 7.28.0.
 - Text is English only (the column is labelled TOT).
 
 ## Troubleshooting
