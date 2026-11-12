@@ -2,8 +2,10 @@
     "version": "0.1.0",
     "asset": {
         "UID": "3f9a6d2e-8b41-4c7e-a5d0-91e2b7c4f803",
+        "WorkshopID": "3838388712",
         "Name": "Soldier Total Stats",
-        "Description": "Adds a sortable TOT column with each soldier's total stats (HP + TU + ACC + STR + RFL + BRV) to the Manage, Recruit and dropship soldier screens, coloured red to green.\n\nSave-safe. Not compatible with Soldier Total Column.",
+        "Description": "Adds a sortable TOT column with each soldier's total stats (HP + TU + ACC + STR + RFL + BRV) to the Manage, Recruit and dropship soldier screens, coloured red to green.\n\nSave-safe. Not compatible with Soldier Total Column.\n\nSource and bug reports: https://github.com/reuvab/xenonauts2-soldier-total-stats",
+        "Visibility": "Public",
         "Author": "Reuven",
         "Website": "https://github.com/reuvab/xenonauts2-soldier-total-stats",
         "Credits": "Inspired by Soldier Total Column by mnshdw.",
