@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 — 2026-11-26
+
+- Fix a crash when opening the Soldiers screen on game version 7.29, whose TextMeshPro
+  no longer has `TextWrappingModes`.
+
 ## 1.0.0 — 2026-11-12
 
 First public release.

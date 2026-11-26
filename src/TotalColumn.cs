@@ -90,7 +90,7 @@ internal static class TotalColumn
             var text = cell.GetComponentsInChildren<TMP_Text>(true).FirstOrDefault();
             if (text == null)
                 return;
-            text.textWrappingMode = TextWrappingModes.NoWrap;
+            text.enableWordWrapping = false;
 
             if (actor == null)
             {
